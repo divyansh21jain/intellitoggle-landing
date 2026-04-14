@@ -1,0 +1,45 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+  }
+
+  body {
+    @apply font-dm text-gray-900 antialiased;
+    overflow-x: hidden;
+    background-color: #fffdff;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply inline-flex items-center justify-center rounded-[5px] bg-primary px-9 text-xl font-bold text-white shadow-btn transition-all duration-200 hover:opacity-90 active:scale-[0.98] focus:outline-none focus:ring-2 focus:ring-primary/50 focus:ring-offset-2;
+    height: 55px;
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center justify-center rounded-[5px] border border-primary px-9 text-xl font-bold text-primary shadow-btn transition-all duration-200 hover:bg-primary hover:text-white active:scale-[0.98] focus:outline-none focus:ring-2 focus:ring-primary/50 focus:ring-offset-2;
+    height: 55px;
+  }
+
+  .section-padding {
+    @apply px-5 sm:px-10 lg:px-[100px];
+  }
+}
+
+@layer utilities {
+  .fade-in-up {
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  }
+
+  .fade-in-up.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
